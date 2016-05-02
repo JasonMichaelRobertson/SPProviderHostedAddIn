@@ -1,9 +1,9 @@
-﻿
-@model SPProviderHostedAddInWeb.Models.SPModel
+﻿@model SPProviderHostedAddInWeb.Models.SPModel
 
 @{
-    ViewBag.Title = "Home Page";
+    ViewBag.Title = "CSOM Cliked View";
 }
+
 
 <div class="jumbotron">
     <h2>Welcome @ViewBag.UserName!</h2>
@@ -50,18 +50,18 @@
                 <Label ID="CurrentUserLabel">@Model.CurrentUser</Label>
 
                 <h2>Site Users</h2>
-                <ul ID="UserList">                      
+                <ul ID="UserList">
                     @if (Model != null && Model.ListOfUsers != null && Model.ListOfUsers.Count > 0)
-                    { 
+                    {
                         foreach (var user in Model.ListOfUsers)
-                        {                                 
+                        {
                             <li>@user</li>
-                        }         
+                        }
                     }
                 </ul>
 
                 <h2>Site Lists</h2>
-                <ul ID="ListList">                
+                <ul ID="ListList">
                     @if (Model != null && Model.ListOfUsers != null && Model.ListOfUsers.Count > 0)
                     {
                         foreach (var list in Model.ListOfLists)
